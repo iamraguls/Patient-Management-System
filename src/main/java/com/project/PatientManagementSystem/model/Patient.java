@@ -10,8 +10,8 @@ import java.util.UUID;
 public class Patient {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @NotNull
     private String name;
@@ -32,7 +32,7 @@ public class Patient {
     public Patient() {
     }
 
-    public Patient(UUID id, String name, String email, String address, LocalDate dob, LocalDate registeredDate) {
+    public Patient(Long id, String name, String email, String address, LocalDate dob, LocalDate registeredDate) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -41,11 +41,11 @@ public class Patient {
         this.registeredDate = registeredDate;
     }
 
-    public UUID getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
