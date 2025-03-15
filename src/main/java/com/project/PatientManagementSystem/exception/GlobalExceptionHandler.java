@@ -17,4 +17,11 @@ public class GlobalExceptionHandler {
         log.warn("Patient Not Found {}",ex.getMessage());
         return Map.of("message","Patient Not Found");
     }
+
+    @ExceptionHandler(EmailAlreadyExistsException.class)
+    public Map<String, String> handleEmailAlreadyExistsException(EmailAlreadyExistsException ex){
+        log.warn("Email already exists {}",ex.getMessage());
+        return Map.of("message","Email already exists");
+    }
+
 }
