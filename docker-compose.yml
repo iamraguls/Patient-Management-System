@@ -1,0 +1,23 @@
+#version: "3.8"
+#services:
+#  server:
+#    build: .
+#    restart: always
+#    ports:
+#      - 8080:8080
+#    depends_on:
+#      - mysqldb-cont
+#    networks:
+#      - pms-net
+#  myslqdb-cont:
+#    image: "mysql:5.7"
+#    restart: always
+#    environment:
+#      MYSQL_ROOT_PASSWORD: root
+#      MYSQL_DATABASE: pms-db
+#      MYSQL_USER: root
+#      MYSQL_PASSWORD: root
+#    ports:
+#      - 3307:3306
+#    networks:
+#      - pms-net
